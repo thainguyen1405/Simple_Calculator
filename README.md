@@ -10,4 +10,4 @@ This is a responsive and functional calculator web app built with **React**. It 
 - Responsive layout with keyboard-like button grid
 
 ##  Live here
- [View it here](https://thainguyen1405.github.io/Simple_Calculator/)  
+ [Compute Hub](https://thainguyen1405.github.io/Simple_Calculator/)  
