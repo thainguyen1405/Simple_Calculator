@@ -1,0 +1,229 @@
+/* Calculator container styling */
+.Calculator {
+  background-color: #413c3c;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  max-width: 320px;
+  margin: 20px auto;
+}
+
+/* Calculator title */
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+/* Display container */
+.display {
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+
+/* Result display */
+.result {
+  color: #888888;
+  font-size: 1.2rem;
+  text-align: right;
+  font-family: 'Courier New', monospace;
+  min-height: 20px;
+  margin-bottom: 8px;
+}
+
+/* Display input field */
+.Calculator input {
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', monospace;
+  outline: none;
+}
+
+.Calculator input::placeholder {
+  color: #888888;
+}
+
+/* Button container grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px;
+  max-width: 280px;
+  margin: 0 auto;
+  background-color: #2d2d2d;
+  border-radius: 15px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Base button styling */
+button {
+  height: 60px;
+  width: 60px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 200;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+  font-family: 'Arial', sans-serif;
+  justify-self: center;
+}
+
+/* Number buttons (0-9, ., ANS) - Dark with grey hover */
+button:nth-child(4n+1), /* First column */
+button:nth-child(4n+2), /* Second column */
+button:nth-child(4n+3), /* Third column except operators */
+button[key="0"],
+button[key="1"],
+button[key="2"],
+button[key="3"],
+button[key="4"],
+button[key="5"],
+button[key="6"],
+button[key="7"],
+button[key="8"],
+button[key="9"],
+button[key="."],
+button[key="ANS"] {
+  background-color: #404040;
+  color: #ffffff;
+}
+
+/* Number buttons hover effect */
+button:nth-child(4n+1):hover,
+button:nth-child(4n+2):hover,
+button:nth-child(4n+3):hover,
+button[key="0"]:hover,
+button[key="1"]:hover,
+button[key="2"]:hover,
+button[key="3"]:hover,
+button[key="4"]:hover,
+button[key="5"]:hover,
+button[key="6"]:hover,
+button[key="7"]:hover,
+button[key="8"]:hover,
+button[key="9"]:hover,
+button[key="."]:hover,
+button[key="ANS"]:hover {
+  background-color: #666666;
+  transform: translateY(-2px);
+}
+
+/* Operator buttons (/, *, -, +, =) - Orange */
+button:nth-child(4n), /* Fourth column (operators) */
+button[key="/"],
+button[key="*"],
+button[key="-"],
+button[key="+"],
+button[key="="] {
+  background-color: #ff9500;
+  color: #ffffff;
+}
+
+/* Operator buttons hover effect */
+button:nth-child(4n):hover,
+button[key="/"]:hover,
+button[key="*"]:hover,
+button[key="-"]:hover,
+button[key="+"]:hover,
+button[key="="]:hover {
+  background-color: #dd6714;
+  transform: translateY(-2px);
+}
+
+/* Function buttons (AC, +/-, %) - Light grey */
+button[key="AC"],
+button[key="+/-"],
+button[key="%"] {
+  background-color: #a6a6a6;
+  color: #000000;
+}
+
+button[key="AC"]:hover,
+button[key="+/-"]:hover,
+button[key="%"]:hover {
+  background-color: #d4d4d4;
+  transform: translateY(-2px);
+}
+
+/* Button active state */
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .Calculator {
+    max-width: 280px;
+    padding: 15px;
+  }
+  
+  .Calculator input {
+    height: 70px;
+    font-size: 1.8rem;
+  }
+  
+  .buttons {
+    max-width: 240px;
+    padding: 15px;
+  }
+  
+  button {
+    height: 50px;
+    width: 50px;
+    font-size: 1.1rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Container for the entire calculator */
+body {
+  background-color: #121212;
+  margin: 0;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+
+/*Social Media Icons*/
+.social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+  position: relative;
+}
+
+.social-icons a {
+  color: #ff9500; 
+  font-size: 2.5rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #dd6714; 
+  transform: scale(1.1);
+}
